@@ -1,3 +1,4 @@
+# Create a Vault cluster at HCP
 variable "tfc_hcp_vault_hvn_id" {
   type = string
   description = "The ID of the HVN this HCP Vault cluster is associated to"
@@ -32,4 +33,25 @@ variable "tfc_hcp_vault_tier" {
   type = string
   description = "The tier of the HCP Vault cluster"
   default = "dev"
+}
+
+############################################################################################################################
+
+# Create an IAM user with related policy to connect Vault with AWS
+
+variable "vault_admin_name" {
+  type = string
+  description = "The IAM user's name"
+  default = "vault-admin"
+}
+
+variable "vault_admin_account_id" {
+  type = string
+  description = "The ID of vault admin's AWS account ID"
+  default = "905418458609"
+}
+
+variable "vault_admin_policy" {
+  type = string
+  description = "The name of the policy"
 }
