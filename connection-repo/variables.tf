@@ -54,4 +54,5 @@ variable "vault_admin_account_id" {
 variable "vault_admin_policy" {
   type = string
   description = "The name of the policy"
+  default = "vault-admin-policy"
 }
