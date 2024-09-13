@@ -15,16 +15,16 @@ output "vault_admin_name" {
 
 output "vault_admin_accesskey" {
   description = "Vault Admin IAM User Access Key"
-  value = aws_iam_access_key.vault_admin_accesskey.id
+  value = aws_iam_access_key.vault_admin_access_key.id
 }
 
 output "vault_admin_secret_accesskey" {
   description = "Vault Admin IAM User Secret Access Key"
-  value = aws_iam_access_key.vault_admin_accesskey.secret
+  value = aws_iam_access_key.vault_admin_access_key.secret
   sensitive = true
 }
 
 output "vault_admin_encrypt_secret_accesskey" {
   description = "Vault Admin IAM User Encrypted Secret Access Key"
-  value = aws_iam_access_key.vault_admin_accesskey.encrypted_secret
+  value = aws_iam_access_key.vault_admin_access_key.encrypted_secret
 }
