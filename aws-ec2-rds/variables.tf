@@ -1,7 +1,7 @@
 variable "vpc_id" {
   description = "The ID of the peer VPC in AWS."
   type = string
-  default = "vpc-0b3afe9f997a71ba8"
+  default = "vpc-0cc569beb00004abc"
 }
 
 variable "public_ssh_security_group_name" {
