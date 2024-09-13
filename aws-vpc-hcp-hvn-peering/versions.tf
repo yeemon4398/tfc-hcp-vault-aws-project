@@ -8,6 +8,10 @@ terraform {
       source = "hashicorp/vault"
       version = "4.4.0"
     }
+    hcp = {
+      source = "hashicorp/hcp"
+      version = "0.96.0"
+    }
   }
 }
 
@@ -17,6 +21,7 @@ provider "aws" {
   secret_key = data.vault_aws_access_credentials.master_netadmin_creds.secret_key
 }
 
-provider "vault" {
-#   address = data.terraform_remote_state.vault_cluster.outputs.vault_public_endpoint_url 
-}
+# provider "vault" {
+#   address = data.terraform_remote_state.vault_cluster.outputs.vault_public_endpoint_url
+  
+# }
